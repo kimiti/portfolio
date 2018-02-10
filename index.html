@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="openMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+    </div>
+
+    <div id="closeMenu">
+        <img src="img/close.png" alt="">
+    </div>
+
+    <head>
+            <div class="header">
+                <div class="menu">
+
+               
+                    <div class="logosection">
+                        <img src="img/DAFT CREATION.png" alt="">
+                    </div>
+                    <div class="menusection">
+                        <ul>
+                                <li onmouseover="anim('about')">
+                                        <div id="about" class="lmenu">
+                                            ABOU
+                                            <div class="rotate">T</div>
+                                        </div>
+                                    </li>
+
+                            <li onmouseover="anim('work')">
+                                    <div id="work" class="lmenu">
+                                        WOR
+                                        <div class="rotate">K</div>
+                                    </div>
+                                </li>
+
+                                <li onmouseover="anim('services')">
+                                        <div id="services" class="lmenu">
+                                            SERVICE
+                                            <div class="rotate">S</div>
+                                        </div>
+                                    </li>
+                        </ul>
+                    </div>
+
+                </div>
+                </div>
+            
+
+    </head>
+    
+
+    <div class="main">
+        <div class="skill">
+            <ul>
+                <li><a href="#"> android development</a></li>
+                <li><a href="#">android development</a></li>
+                <li><a href="#">android development</a></li>
+                <li><a href="#">android development</a></li>
+                <li><a href="#">android development</a></li>
+            </ul>
+        </div>
+        <div class="skill-more">
+
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+
+<script type="text/javascript"> 
+
+    function anim(targetedDiv){
+        var targetedLetter = $("#"+targetedDiv+" .rotate").text();
+
+        var asciiValue = targetedLetter.charCodeAt(0);
+
+        var pointer = 65;
+
+        changeChar();
+
+        function changeChar(){
+            if(pointer <= asciiValue){
+                $("#"+targetedDiv+" .rotate").text(String.fromCharCode(pointer));
+
+                pointer++;
+                setTimeout(changeChar, 20);
+            }
+            else{
+                $(this).stop;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>
